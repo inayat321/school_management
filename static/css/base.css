@@ -1,0 +1,172 @@
+body{
+	min-height: 100%;
+	min-width: 100%;
+	background-color:#ffffff;
+  margin: 0;
+  padding: 0;
+  /*color: #D62229;*/
+}
+.headerbody{
+  min-width: 100%;
+  min-width:100%;
+}
+body a{
+  
+  /*text-decoration: none;*/
+ }
+.main{
+  min-height: 100%;
+  min-height: 100%;
+  margin: 0 auto -93px;
+}
+.main ul{
+      padding: 0;
+      margin: 0;
+      list-style-type:none;
+
+}
+.main li{
+  display:inline;
+  margin: 0;
+  padding: 0;
+}
+.main li a{
+  text-decoration: none;
+}
+.page-header{
+  height: 105px;
+  /*background-color: blue;*/
+}
+
+.logodiv{
+  float: left;
+}
+/*logo class start*/
+.logo{
+    height: 100px;
+    width: 166px;
+    position: absolute;
+    padding-left: 5px;
+}
+.logodiv a{
+  text-decoration: none;
+}
+/*logo style closed*/
+.schoolname{
+	font-size: 29px;
+    position: absolute;
+    left: 224px;
+}
+/*schoolname style closed*/
+.login{
+	float: right;
+}
+.login ul{
+	list-style-type: none;
+}
+/*login style closed*/
+.nav{
+	position: relative;
+	top: 115px;
+	background-color: darkgrey;
+	height: 52px;
+}
+.nav ul{
+	}
+.nav ul li{
+	list-style-type: none;
+	display: inline;
+	}
+.nav ul li a{
+	font-size: 30px;
+	 padding-left: 20px;
+	 
+	 text-decoration: none;
+}
+.nav ul li a:hover{
+  color:#375a04;
+}
+/*dropdown starts*/
+.dropbtn {
+  /*background-color: #4CAF50;*/
+  /*color: white;*/
+  /*padding: 16px;*/
+  /*font-size: 16px;*/
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a
+ {
+  color: black;
+  padding: 3px 3px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+/*dropdown closed*/
+.push{
+  height: 132px;
+}
+.totalstudents {
+    border: 1px solid black;
+    height: 80px;
+    width: 248px;
+    margin-top: 77;
+    margin-left: 146;
+    font-size: 27;
+}
+footer{
+	background-color: red;
+    text-align: center;
+    height: 68px;
+}
+.formstyle{
+	 margin-left: 450px;
+    margin-top: 129px;
+    border: 1px solid black;
+    height: 232px;
+    width: 526px;
+}
+.formstyle input{
+	font-size: 25px;
+}
+/*.formstyle .btn{
+	font-size: 27px;
+}*/
+/*.otrdiv{
+	height: 300px;
+	width: 300px;
+	border: 1px solid black;
+	 margin-left: 155px;
+    margin-top: 129px;
+}*/
+form{
+	    margin-top: 24px;
+    margin-left: 64px;
+}
+.dropdown-content .drpa
+ {
+  color: black;
+  padding: 0px 0px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+}
+
+

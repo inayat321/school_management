@@ -1,0 +1,49 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% include "common/header.html" %}
+
+<!-- {% for class in object_list %}
+	<table>
+		<tr>
+			<td>{{class.id}}</td>
+			<td>{{class.name}}</td>
+		</tr>
+</table>
+{% endfor %} -->
+
+<h1>{{ object.name }} - {{ object.id }}</h1>
+		
+<table>
+	
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Roll No</th>
+			<th>Class Name</th>
+			{% if user.is_authenticated %}
+			<th>Action</th>		
+				{% endif %}
+		</tr>
+	
+	
+		
+		{% for student in object.students.all %}
+			<tr>
+				<td>{{ student.id }}</td>
+				<td>{{ student.name }}</td>
+				<td>{{ student.age }}</td>
+				<td>{{ student.roll_no }}</td>
+				<td>{{ student.student_class.name }}</td>
+				{% if user.is_authenticated %}
+					<td><a href="#">Edit</a> | <a href="#">Delete</a> </td>		
+				{% endif %}
+			</tr>
+		{% endfor %}
+
+		<!-- {% for student in object_list %}
+		<tv
+		{% endfor %} -->
+	
+</table>
+{% include "common/footer.html" %}

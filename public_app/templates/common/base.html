@@ -1,0 +1,75 @@
+{% load common_tags %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<html>
+	<head>
+		<body>
+
+			{% block  'head_section' %}
+			<div class="main">
+				<!-- main div starts -->
+				<header class="page-header">
+					<!-- page header starts -->
+					<div class="logodiv">
+						<a href=""><img src="{% static 'images/logo.png' %}"  alt="Smiley face" class="logo"></a>
+					</div>
+					<!-- logo div closed -->
+					<div class="schoolname">
+						<p>Delhi Public School</p>
+						
+					</div>
+					<div class="login">
+						<ul>
+							<li><a href="http://127.0.0.1:8000/teacher/login/">Login</a></li>
+						</ul>
+					</div>
+					<!-- login div closed -->
+					<div class="nav">
+						<ul>
+							<li><a href="">Home</a></li>
+							<div class="dropdown">
+								<li><a href="" class="dropbtn">Class</a></li>
+								<div class="dropdown-content">
+								    {% class_list %}
+
+								    
+								</div>
+							</div>
+							<li><a href="">Contact</a></li>
+						</ul>
+					</div>
+
+				</header>
+				{% endblock %}
+				
+				
+				<div class="content">
+					<div class="totalstudents">TOTAL STUDENTS
+						{{total_students}}{{total_teachers}}
+						
+					</div>
+					<div class="totalstudents">TOTAL TEACHERS
+						{{total_teachers}}
+						
+					</div>
+					
+					<p>There are a wide range of Indian vegetables that you can find in the market that you will need. Be it your green vegetables, fiber rich vegetables, exotic vegetables or any green leafy vegetables, you can find it on bigbasket</p>
+					<p>There are a wide range of Indian vegetables that you can find in the market that you will need. Be it your green vegetables, fiber rich vegetables, exotic vegetables or any green leafy vegetables, you can find it on bigbasket</p>
+					<p>There are a wide range of Indian vegetables that you can find in the market that you will need. Be it your green vegetables, fiber rich vegetables, exotic vegetables or any green leafy vegetables, you can find it on bigbasket</p>
+					<p>There are a wide range of Indian vegetables that you can find in the market that you will need. Be it your green vegetables, fiber rich vegetables, exotic vegetables or any green leafy vegetables, you can find it on bigbasket</p>
+					<p>There are a wide range of Indian vegetables that you can find in the market that you will need. Be it your green vegetables, fiber rich vegetables, exotic vegetables or any green leafy vegetables, you can find it on bigbasket</p>
+						}
+
+				</div>
+				<h3 style="text-align:center"></h3>
+				<li>
+				</div>
+				<!-- page header closed -->
+				<div class="push"></div>
+				<footer>copyright@2020</footer>
+
+			</div>
+			<!-- main div closed -->
+		</body>
+	</head>
+</html>

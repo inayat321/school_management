@@ -1,0 +1,68 @@
+{% load common_tags %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<html>
+	<head>
+		<body class="headerbody">
+
+			
+
+			
+				<!-- main div starts -->
+				<header class="page-header">
+					<!-- page header starts -->
+					<div class="logodiv">
+						<a href=""><img src="{% static 'images/logo.png' %}"  alt="Smiley face" class="logo"></a>
+					</div>
+					<!-- logo div closed -->
+					<div class="schoolname">
+						<p>Delhi Public School</p>
+						
+					</div>
+					<div class="login">
+						<ul>
+							{% if user.is_authenticated %}
+					<li class="leftalign"><a href="{% url 'teachers:logout' %}">Logout</a></li>
+					<li class="leftalign"><a href="{% url 'teachers:dashboard' %}">Dashboard</a></li>
+					<li class="leftalign"><a href="{% url 'teachers:passwordreset' %}">My account</a></li>
+				{% else %}
+					<li class="leftalign"><a href="{% url 'teachers:login_page' %}">Login</a></li>
+				{% endif %}
+							<!-- <li><a href="http://127.0.0.1:8000/teacher/login/">Login</a></li> -->
+						</ul>
+					</div>
+					<!-- login div closed -->
+					<div class="nav">
+						<ul>
+							<li><a href="http://127.0.0.1:8000/">Home</a></li>
+							<div class="dropdown">
+								<li><a href="" class="dropbtn">Class</a></li>
+								<div class="dropdown-content">
+								    
+									 
+									{% class_list %}
+
+									
+
+								    
+								</div>
+							</div>
+							<li><a href="">Contact</a></li>
+						<!-- 	{% if user.is_authenticated %}
+					<li class="leftalign"><a href="{% url 'teachers:logout' %}">Logout</a></li>
+					<li class="leftalign"><a href="{% url 'teachers:dashboard' %}">Dashboard</a></li>
+					<li class="leftalign"><a href="{% url 'teachers:passwordreset' %}">My account</a></li>
+				{% else %}
+					<li class="leftalign"><a href="{% url 'teachers:login_page' %}">Login</a></li>
+				{% endif %} -->
+						</ul>
+					</div>
+
+				</header>
+				
+				
+				
+			<!-- main div closed -->
+		</body>
+	</head>
+</html>

@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<table>
+		<tr>
+			<th>Id</th>
+			<th>Class_Name</th>
+		</tr>
+{% for class in object_list %}
+		<tr>
+			<td>{{class.id}}</td>
+			<td>{{class.name}}</td>
+	</tr>
+{% endfor %}
+	
+</table>

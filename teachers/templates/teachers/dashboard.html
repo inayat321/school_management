@@ -1,0 +1,73 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% include "common/header.html" %}
+
+<!-- {% for class in object_list %}
+	<table>
+		<tr>
+			<td>{{class.id}}</td>
+			<td>{{class.name}}</td>
+		</tr>
+</table>
+{% endfor %} -->
+
+<h1>{{ object.name }} - {{ object.id }}</h1>
+		
+<table>
+	
+		<tr>
+			<th>Class Name</th>
+			<th>Student Total</th>
+			<th>Action</th>
+		</tr>
+	
+	{% for  cls in teacher_classes %}
+				<tr>
+					<td>{{ cls.teacher_class.name}}</td>
+					<td>{{ cls.teacher_class.students.count }}</td>
+					<td><a href="{% url 'students:student_list' cls.teacher_class.id%}">view details</td>
+				</tr>
+			{% endfor %}
+<!-- {% url 'teachers:login_page' %} -->
+		
+		<!-- {% for student in object.students.all %}
+			<tr>
+				<td>{{ student.id }}</td>
+				<td>{{ student.name }}</td>
+				<td>{{ student.age }}</td>
+				<td>{{ student.roll_no }}</td>
+				<td>{{ student.student_class.name }}</td>
+			</tr>
+		{% endfor %} -->
+
+		<!-- {% for student in object_list %}
+		<tv
+		{% endfor %} -->
+	
+</table>
+{% include "common/footer.html" %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

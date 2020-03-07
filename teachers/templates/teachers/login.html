@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% include "common/header.html" %}
+<div class="otrdiv">
+<div class="formstyle">
+<form name="emp" action="{% url 'teachers:login_page' %}" method="post">{% csrf_token %}
+	 <label for="email">Username</label><br>
+	<input type="text" name="username" required placeholder="enter username  "><br>
+	<label for="password">password</label><br>
+	<input type="password" name="password" required placeholder="enter password"><br>
+	<input type="checkbox">Remember me<br>
+	<input type="submit" name="btn" value="Login" class="btn">
+	{% if msg %}
+	<p>{{ msg }}</p>
+{% endif %}
+	
+</form>
+</div>
+</div>
+{% include "common/footer.html" %}
